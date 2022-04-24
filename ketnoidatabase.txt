@@ -1,0 +1,6 @@
+DB Host: db.lmsq.vn
+DB Port: 3306
+DB User: QNhan
+DB Password: 12345678
+Web Console: https://db.lmsq.vn
+DB NAME : QNhan_datvemaybay
