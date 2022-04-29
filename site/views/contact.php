@@ -36,7 +36,7 @@
                         </div>
                         <div class="form-group">
                             <label for="diachi">Địa chỉ</label>
-                            <input type="text" class="form-control" id="diachi" name="diachi" placeholder="123 Cộng Hòa, P.11, Q.Tân Bình, Hồ Chí Minh">
+                            <input type="text" class="form-control" id="diachi" name="diachi" placeholder="254 Nguyễn Văn Linh, Đà Nẵng">
                             <div class="l-div-err color_red display-none" id="diachierro">Vui lòng nhập địa chỉ <i class="fas fa-exclamation-circle"></i></div>
                         </div>
                         <div class="form-group">
