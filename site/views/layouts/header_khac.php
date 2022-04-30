@@ -100,9 +100,9 @@
                                 <li class="nav-item">
                                     <a class="" href="<?=SITE_URL?>?act=contact">LIÊN HỆ</a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a class="" href="<?=SITE_URL?>?act=blog">BÀI VIẾT</a>
-                                </li>                                
+                                </li>                                 -->
                                 <li class="nav-item">
                                     <a class="pd-r-0" style="padding-right: 0px;" href="<?=SITE_URL?>?act=about">VỀ CHÚNG TÔI</a>
                                 </li>
