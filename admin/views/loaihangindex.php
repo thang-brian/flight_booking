@@ -39,8 +39,8 @@
                                         }else{
                                             $anhien ='onclick="return false"';
                                         }
-                                        $linkdel = "index.php?ctrl=loaihang&act=del&iddel=".$id;
-                                        $linkedit = "index.php?ctrl=loaihang&act=add&idedit=".$id;        
+                                        $linkdel = "/ban-ve-may-bay/admin/index.php?ctrl=loaihang&act=del&iddel=".$id;
+                                        $linkedit = "/ban-ve-may-bay/admin/index.php?ctrl=loaihang&act=add&idedit=".$id;        
                                     ?>
                                     <tr>
                                         <td><?=$i?></td>

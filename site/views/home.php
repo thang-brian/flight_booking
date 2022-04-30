@@ -425,7 +425,7 @@
     <div class="background-light-grey W-100 pd-t-100px pd-bot-50px">
         <div class="container pd-bot-80px">
             <div class="row">
-                <div class="col-lg-6 te-al-left">
+                <!-- <div class="col-lg-6 te-al-left">
                     <div class="section-title-left mr-bot-70px">
                         <h1 class="title fz-2vw"><span class="color_main">Bài </span> Viết</h1>
                         <span class="section-title-des fz-1vw">Kênh tin tức về du lịch, trao đổi, chia sẻ kinh nghiệm</span>
@@ -446,8 +446,8 @@
                         </div>
                     <?php } ?>
 
-                </div>
-                <div class="col-lg-6 te-al-left">
+                </div> -->
+                <!-- <div class="col-lg-6 te-al-left"> -->
                     <div class="section-title-left mr-bot-70px">
                         <h1 class="title fz-2vw"><span class="color_main">Khách Hàng </span> Nói Về Chúng Tôi</h1>
                         <span class="section-title-des fz-1vw">Hãy góp ý cho chúng tôi giúp chúng tôi phục vụ bạn tốt hơn</span>
@@ -494,7 +494,7 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </div>

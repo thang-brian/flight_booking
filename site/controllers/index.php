@@ -24,7 +24,7 @@ require_once "models/timve.php";
 
 if (!isset($_GET['act']) || ($_GET['act'] == 'home')) {
     require_once "views/layouts/header_home.php";
-    $blog = gettwoblog();
+    // $blog = gettwoblog();
     $showAllSanBay = showAllSanBay();
 
     // print_r($showAllSanBay);
@@ -92,62 +92,62 @@ if (isset($_GET['act'])) {
                 $data1 = showDiemDen2();
                 require_once "views/danhsachve.php";
                 break;
-            case 'blog':
-                unsetSs();
-                $page_num = 1;
-                $page_size = PAGE_SIZE;
-                $getbestBlog = getBestBlog(); // lay blog nhieu luot xem    
-                $getDmblog = getDmblog();
-                if (isset($_GET['page_num']) == true) {
-                    $page_num = $_GET['page_num'];
-                }
-                settype($page_num, "int");
-                if (isset($_GET['iddm']) == true) {
-                    $iddm = $_GET['iddm'];
-                    $getDmblogbyid = getDmblogbyid($iddm); // để lay name danh muc
-                    $allBlog = getBlogByiddm1($iddm, $page_num, $page_size); // lay blog theo id danh muc
-                    $total_rows = countBlogbyiddm($iddm);
-                    $baseurl = SITE_URL . "?act=blog&iddm=$iddm";
-                } else {
-                    $allBlog = getallBlog($page_num, $page_size);   // lay tat ca blog
-                    $total_rows = countBlog();
-                    $baseurl = SITE_URL . "?act=blog";
-                }
-                if ($page_num <= 0) {
-                    $page_num = 1;
-                }
+        //     case 'blog':
+        //         unsetSs();
+        //         $page_num = 1;
+        //         $page_size = PAGE_SIZE;
+        //         $getbestBlog = getBestBlog(); // lay blog nhieu luot xem    
+        //         $getDmblog = getDmblog();
+        //         if (isset($_GET['page_num']) == true) {
+        //             $page_num = $_GET['page_num'];
+        //         }
+        //         settype($page_num, "int");
+        //         if (isset($_GET['iddm']) == true) {
+        //             $iddm = $_GET['iddm'];
+        //             $getDmblogbyid = getDmblogbyid($iddm); // để lay name danh muc
+        //             $allBlog = getBlogByiddm1($iddm, $page_num, $page_size); // lay blog theo id danh muc
+        //             $total_rows = countBlogbyiddm($iddm);
+        //             $baseurl = SITE_URL . "?act=blog&iddm=$iddm";
+        //         } else {
+        //             $allBlog = getallBlog($page_num, $page_size);   // lay tat ca blog
+        //             $total_rows = countBlog();
+        //             $baseurl = SITE_URL . "?act=blog";
+        //         }
+        //         if ($page_num <= 0) {
+        //             $page_num = 1;
+        //         }
     
-                $links = taolinks($baseurl, $page_num, $page_size, $total_rows);
-                require_once "views/blog.php";
-                break;
-        case 'dtBlog':
-            unsetSs();
-            if (isset($_GET['idbl']) == true) {
-                $id = $_GET['idbl'];
-            } // id blog
+        //         $links = taolinks($baseurl, $page_num, $page_size, $total_rows);
+        //         require_once "views/blog.php";
+        //         break;
+        // case 'dtBlog':
+        //     unsetSs();
+        //     if (isset($_GET['idbl']) == true) {
+        //         $id = $_GET['idbl'];
+        //     } // id blog
 
-            if (isset($_SESSION['suser'])) { // get user
-                $user = $_SESSION['suser'];
-                $userr = getIdbyuser($user);
-            } else {
-                $user = '0';
-            }
-            settype($id, "int");
-            $getBlogbyid = getBlogbyid($id); //
-            $getbestBlog = getBestBlog(); // blog hay
-            $getDmblog = getDmblog();
-            $binhluan = showCmt($id);
-            $sobinhluan = rowcountCmt($id);
-            $idkh = $binhluan[0]['idkh'];
-            $getKhbyId = getKhbyId($idkh);
+        //     if (isset($_SESSION['suser'])) { // get user
+        //         $user = $_SESSION['suser'];
+        //         $userr = getIdbyuser($user);
+        //     } else {
+        //         $user = '0';
+        //     }
+        //     settype($id, "int");
+        //     $getBlogbyid = getBlogbyid($id); //
+        //     $getbestBlog = getBestBlog(); // blog hay
+        //     $getDmblog = getDmblog();
+        //     $binhluan = showCmt($id);
+        //     $sobinhluan = rowcountCmt($id);
+        //     $idkh = $binhluan[0]['idkh'];
+        //     $getKhbyId = getKhbyId($idkh);
 
-            if (isset($_GET['iddm']) == true) {
-                $iddm = $_GET['iddm'];
-            }
-            settype($iddm, "int");
-            $getBlogByiddm = getBlogByiddm($iddm);
-            require_once "views/blogdetail.php";
-            break;
+        //     if (isset($_GET['iddm']) == true) {
+        //         $iddm = $_GET['iddm'];
+        //     }
+        //     settype($iddm, "int");
+        //     $getBlogByiddm = getBlogByiddm($iddm);
+        //     require_once "views/blogdetail.php";
+        //     break;
         case 'login':
             unsetSs();
             echo ' <link rel="stylesheet" href="views/css/phuong/main.css">';
@@ -226,11 +226,11 @@ if (isset($_GET['act'])) {
             echo ' <link rel="stylesheet" href="views/css/phuong/hsedit.css">';
             echo '<link rel="stylesheet" href="scss/buton.scss">';
             if (isset($_POST['quenmk']) && ($_POST['quenmk'])) {
-
                 $email = trim(stripTags(test_input($_POST['email'])));
                 $checkEmail = checkEmailTonTai($email);
                 $idUser = $checkEmail['id'];
                 $user = $checkEmail['user'];
+                var_dump($checkEmail);
                 if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
                     $thongbao = "$email Nhập Không Hợp Lệ!";
                     $thanhcong = false;

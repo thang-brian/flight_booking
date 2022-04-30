@@ -126,14 +126,14 @@
                                     <input type="text" name="thanhpho" id="" class="form-control" value="<?=$showkhedit['thanhpho']?>" placeholder="Thành Phố" aria-describedby="helpId" required>
                                 </div>
                             </div>
-                            <div class="row mt-4">
+                            <!-- <div class="row mt-4">
                                 <div class="col-lg-3">
                                     <label for=""><strong>Tích Điểm</strong></label>
                                 </div>
                                 <div class="col-lg-9">
                                     <input type="number" name="tichdiem" id="" class="form-control" value="<?=$showkhedit['tichdiem']?>" placeholder="Điểm Tích Lũy" aria-describedby="helpId" >
                                 </div>
-                            </div> 
+                            </div>  -->
                             <div class="row mt-5">
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-9 ">

@@ -31,7 +31,7 @@
               <li><a href="index.php?act=userprofile"> <i class="fa fa-calendar"></i> Đổi Mật Khẩu </a></li>
                <?php  foreach ($showhs as $hskh ) {
               $id=$hskh['id'];
-              $linkedit = "index.php?act=hsedit&idedit=".$id; 
+              $linkedit = "/ban-ve-may-bay/admin/index.php?act=hsedit&idedit=".$id; 
           ?>
               <li><a href="<?=$linkedit?>"> <i class="fa fa-edit"></i> Chỉnh Sửa Thông Tin</a></li>
                <?php }?>

@@ -1,20 +1,20 @@
-
+<!-- 
 <?php
-function checked($temp){
-    if($temp == 1){
-        $temp = 'checked';
-    }else{
-        $temp = '';
-    }
-    return $temp;
-}
-$anhien = checked($showspedit[0]['public']);
-$img = $pathimg.$showspedit[0]['img'];
-if(is_file($img)){
-    $img = $img;
-}else{
-    $img = "nothing...";
-}
+// function checked($temp){
+//     if($temp == 1){
+//         $temp = 'checked';
+//     }else{
+//         $temp = '';
+//     }
+//     return $temp;
+// }
+// $anhien = checked($showspedit[0]['public']);
+// $img = $pathimg.$showspedit[0]['img'];
+// if(is_file($img)){
+//     $img = $img;
+// }else{
+//     $img = "nothing...";
+// }
 ?>
 <div class="col-lg-10">
     <div class="container-fluid">
@@ -145,4 +145,4 @@ if(is_file($img)){
             </div>
         </div>
     </div>
-</div>
+</div> -->

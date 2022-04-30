@@ -2,33 +2,33 @@
 <?php
 if(is_array($showbledit)){
     
-    $star  =$showbledit['star']; 
-    $idkh = $showbledit['idkh'];  
-    if($idkh== $showbledit['id']){
-        $chon = 'selected';
-    }else{
-        $chon = '';
-    }
+    // $star  =$showbledit['star']; 
+    // $idkh = $showbledit['idkh'];  
+    // if($idkh== $showbledit['id']){
+    //     $chon = 'selected';
+    // }else{
+    //     $chon = '';
+    // }
   
-    $idbaiviet=$showbledit['idbaiviet'];
-    $tenbv = showtenbvbyid($idbaiviet);
-    $tenKH = showtenkh($idkh);
+    // $idbaiviet=$showbledit['idbaiviet'];
+    // $tenbv = showtenbvbyid($idbaiviet);
+    // $tenKH = showtenkh($idkh);
 
-    $noidung  =$showbledit['noidung'];    
-    $idsp =$showbledit['idsp'];   
-    $anhien =  $showbledit['trangthai'];  
-    if($anhien == 1){
-        $anhien = 'checked';
-    }else{
-        $anhien = '';
-    }
+    // $noidung  =$showbledit['noidung'];    
+    // $idsp =$showbledit['idsp'];   
+    // $anhien =  $showbledit['trangthai'];  
+    // if($anhien == 1){
+    //     $anhien = 'checked';
+    // }else{
+    //     $anhien = '';
+    // }
     
 ?>
 
 
 
 
-<div class="col-lg-10">
+<!-- <div class="col-lg-10">
     <div class="container-fluid">
         <div class="row d-flex justify-content-between mt-3">
             <div class="col-lg-4 mt-3">
@@ -52,7 +52,7 @@ if(is_array($showbledit)){
                         <div class="col-lg-8">
                             <h3 class="mt-4 text-center">THÊM BÌNH LUẬN</h3>
                             <p class="text-center">Bạn có thể thêm bình luận ở đây!</p>
-                            <!-- <div class="row">
+                                <div class="row">
                                 <div class="col-lg-3">
                                     <label for=""><strong>ALL Sản Phẩm</strong></label>
                                 </div>
@@ -63,7 +63,7 @@ if(is_array($showbledit)){
                                     </select>
                                 </div>
                             </div> -->
-                            <div class="row mt-4">
+                            <!-- <div class="row mt-4">
                                 <div class="col-lg-3">
                                     <label for=""><strong>Star</strong></label>
                                 </div>
@@ -139,7 +139,7 @@ if(is_array($showbledit)){
             </div>
         </div>
     </div>
-</div>
+</div> --> 
 
 
 

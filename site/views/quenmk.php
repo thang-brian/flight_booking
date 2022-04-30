@@ -14,7 +14,7 @@
                     </div>
                     <div class="">
                         <input type="submit" name="quenmk" value="Gửi" id="quenmk" class="btn btn-gradient-success mr-2">
-
+                        <p><?php echo $thongbao?></p>
                     </div></form>
                 
 

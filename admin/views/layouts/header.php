@@ -114,7 +114,7 @@
                                     <div class="nav-main__text">Trang Chủ</div>
                                 </a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <div class="nav-link">
                                     <div class="nav-main__icon" ><label for="bv"><svg width="25" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M459.94 53.25a16.06 16.06 0 00-23.22-.56L424.35 65a8 8 0 000 11.31l11.34 11.32a8 8 0 0011.34 0l12.06-12c6.1-6.09 6.67-16.01.85-22.38zM399.34 90L218.82 270.2a9 9 0 00-2.31 3.93L208.16 299a3.91 3.91 0 004.86 4.86l24.85-8.35a9 9 0 003.93-2.31L422 112.66a9 9 0 000-12.66l-9.95-10a9 9 0 00-12.71 0z"></path><path d="M386.34 193.66L264.45 315.79A41.08 41.08 0 01247.58 326l-25.9 8.67a35.92 35.92 0 01-44.33-44.33l8.67-25.9a41.08 41.08 0 0110.19-16.87l122.13-121.91a8 8 0 00-5.65-13.66H104a56 56 0 00-56 56v240a56 56 0 0056 56h240a56 56 0 0056-56V199.31a8 8 0 00-13.66-5.65z"></path></svg></label></div>
                                     <div class="nav-main__text "><div id="bv" class="click_title">Bài Viết </div>
@@ -126,8 +126,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="<?php if(isset($_GET['ctrl']) &&$_GET['ctrl']=="binhluan") echo "active";?>">
+                            </li> -->
+                            <!-- <li class="<?php if(isset($_GET['ctrl']) &&$_GET['ctrl']=="binhluan") echo "active";?>">
                                 <div class="nav-link">
                                     <div class="nav-main__icon" ><label for="bv"><svg width="25" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M368 96H144a16 16 0 010-32h224a16 16 0 010 32zM400 144H112a16 16 0 010-32h288a16 16 0 010 32zM419.13 448H92.87A44.92 44.92 0 0148 403.13V204.87A44.92 44.92 0 0192.87 160h326.26A44.92 44.92 0 01464 204.87v198.26A44.92 44.92 0 01419.13 448z"></path></svg></label></div>
                                     <div class="nav-main__text "><div id="bv" class="click_title">Bình Luận</div>
@@ -139,7 +139,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </li>
+                            </li> -->
 
                             <li class="<?php if(isset($_GET['ctrl']) &&$_GET['ctrl']=="loaihang") echo "active";?>">
                                 <div class="nav-link">

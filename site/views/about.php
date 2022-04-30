@@ -61,7 +61,7 @@
         <div class="row">
           <div class="l-box-our d-inline-block">          
             <a href=""><img src="../uploads/avt2.jpg" width="100%" alt=""></a>
-            <a href="" class="name-admin">Nguễn Quốc Hiếu</a>
+            <a href="" class="name-admin">Thân Trọng Thắng</a>
             <ul class="list-inline text-center margin-0px line_h_28 font-size mr-0">
               <div class="div-icon">
                 <li class="list-inline-item"><a class="facebook" href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
@@ -82,7 +82,7 @@
           </div>
           <div class="l-box-our d-inline-block">          
             <a href=""><img src="../uploads/avt2.jpg" width="100%" alt=""></a>
-            <a href="" class="name-admin">Nguễn Quốc Hiếu</a>
+            <a href="" class="name-admin">Thân Trọng Thắng</a>
             <ul class="list-inline text-center margin-0px line_h_28 font-size mr-0">
               <div class="div-icon">
                 <li class="list-inline-item"><a class="facebook" href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
@@ -103,7 +103,7 @@
           </div>
           <div class="l-box-our d-inline-block">          
             <a href=""><img src="../uploads/avt2.jpg" width="100%" alt=""></a>
-            <a href="" class="name-admin">Nguễn Quốc Hiếu</a>
+            <a href="" class="name-admin">Thân Trọng Thắng</a>
             <ul class="list-inline text-center margin-0px line_h_28 font-size mr-0">
               <div class="div-icon">
                 <li class="list-inline-item"><a class="facebook" href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
@@ -124,7 +124,7 @@
           </div>
           <div class="l-box-our d-inline-block mr-0">          
             <a href=""><img src="../uploads/avt2.jpg" width="100%" alt=""></a>
-            <a href="" class="name-admin">Nguễn Quốc Hiếu</a>
+            <a href="" class="name-admin">Thân Trọng Thắng</a>
             <ul class="list-inline text-center margin-0px line_h_28 font-size mr-0">
               <div class="div-icon">
                 <li class="list-inline-item"><a class="facebook" href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>

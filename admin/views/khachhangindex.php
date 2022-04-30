@@ -45,8 +45,8 @@
                         }else{
                             $role= 'Khách Hàng';
                         }
-                        $linkdel = "index.php?ctrl=khachhang&act=del&iddel=".$id;
-                        $linkedit = "index.php?ctrl=khachhang&act=add&idedit=".$id;        
+                        $linkdel = "/ban-ve-may-bay/admin/index.php?ctrl=khachhang&act=del&iddel=".$id;
+                        $linkedit = "/ban-ve-may-bay/admin/index.php?ctrl=khachhang&act=add&idedit=".$id;        
                     ?>
                     <tr>
                         <td><?=$i?></td>  

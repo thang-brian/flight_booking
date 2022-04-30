@@ -1,4 +1,4 @@
- <div class="col-lg-10">
+<div class="col-lg-10">
      <div class="l-box-white">
         <div class="container-fluid">
             <div class="row d-flex justify-content-between mt-3">
@@ -58,8 +58,8 @@
                                                 $trangthai = "Chưa Bay";
                                             }
                                         }
-                                        $linkdel = "index.php?ctrl=ve&act=del&iddel=" . $id;
-                                        $linkedit = "index.php?ctrl=ve&act=add&idedit=" . $id;
+                                        $linkdel = "/ban-ve-may-bay/admin/index.php?ctrl=ve&act=del&iddel=" . $id;
+                                        $linkedit = "/ban-ve-may-bay/admin/index.php?ctrl=ve&act=add&idedit=" . $id;
                                     ?>
                                     <tr>
                                         <td><?= $i ?></td>

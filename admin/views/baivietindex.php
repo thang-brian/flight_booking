@@ -1,4 +1,4 @@
-<div class="col-lg-10">
+<!-- <div class="col-lg-10">
     <div class="l-box-white">
         <div class="container-fluid">
             <div class="row d-flex justify-content-between mt-3">
@@ -64,4 +64,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
