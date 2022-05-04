@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: localhost:8889
--- Thời gian đã tạo: Th4 30, 2022 lúc 03:11 PM
--- Phiên bản máy phục vụ: 5.7.34
--- Phiên bản PHP: 8.0.8
+-- Host: localhost:8889
+-- Generation Time: May 04, 2022 at 03:19 AM
+-- Server version: 5.7.34
+-- PHP Version: 8.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `flight_booking_db`
+-- Database: `flight_booking_db`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chuyenbay`
+-- Table structure for table `chuyenbay`
 --
 
 CREATE TABLE `chuyenbay` (
@@ -40,30 +40,31 @@ CREATE TABLE `chuyenbay` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `chuyenbay`
+-- Dumping data for table `chuyenbay`
 --
 
 INSERT INTO `chuyenbay` (`id`, `idtuyenduong`, `idhang`, `idnhanvien`, `idmaybay`, `ngaydi`, `giodi`, `gioden`, `trangthai`) VALUES
-(80, 2, NULL, NULL, 3, '2021-06-12', '16:45:00', '18:45:00', 0),
-(81, 81, NULL, NULL, 2, '2021-06-12', '23:45:00', '01:45:00', 0),
-(82, 78, NULL, NULL, 2, '2021-06-12', '16:30:50', '20:20:45', 0),
-(83, 79, NULL, NULL, 3, '2021-06-13', '20:00:00', '01:00:00', 0),
-(84, 80, NULL, NULL, 1, '2021-06-13', '20:00:30', '23:30:00', 0),
-(85, 59, NULL, NULL, 4, '2021-06-14', '04:09:40', '09:08:40', 0),
-(86, 2, NULL, NULL, 1, '2021-06-14', '21:45:00', '21:45:00', 0),
-(87, 80, NULL, NULL, 1, '2021-06-15', '02:51:00', '03:57:00', 0),
-(88, 78, NULL, NULL, 1, '2021-06-14', '16:50:00', '22:20:00', 0),
-(89, 79, NULL, NULL, 1, '2021-06-12', '19:50:00', '02:20:00', 0),
-(90, 80, NULL, NULL, 1, '2021-06-12', '11:25:00', '18:25:00', 0),
-(91, 2, NULL, NULL, 1, '2021-04-16', '19:45:00', '21:45:00', 0),
-(92, 81, NULL, NULL, 1, '2021-03-29', '02:45:00', '03:45:00', 0),
-(93, 2, NULL, NULL, 1, '2021-03-29', '23:45:00', '01:45:00', 0),
-(94, 81, NULL, NULL, 1, '2021-03-21', '21:45:00', '22:45:00', 0);
+(80, 2, NULL, NULL, 3, '2021-09-12', '20:45:00', '22:45:00', 1),
+(81, 81, NULL, NULL, 2, '2021-09-13', '03:45:00', '05:45:00', 1),
+(82, 78, NULL, NULL, 2, '2021-09-12', '20:30:50', '00:20:45', 1),
+(83, 79, NULL, NULL, 3, '2021-09-14', '00:00:00', '05:00:00', 1),
+(84, 80, NULL, NULL, 1, '2021-09-14', '00:00:30', '03:30:00', 1),
+(85, 59, NULL, NULL, 4, '2021-09-14', '08:09:40', '13:08:40', 1),
+(86, 2, NULL, NULL, 1, '2021-09-15', '01:45:00', '01:45:00', 1),
+(87, 80, NULL, NULL, 1, '2021-09-15', '06:51:00', '07:57:00', 1),
+(88, 78, NULL, NULL, 1, '2021-09-14', '20:50:00', '02:20:00', 1),
+(89, 79, NULL, NULL, 1, '2021-09-12', '23:50:00', '06:20:00', 1),
+(90, 80, NULL, NULL, 1, '2021-09-12', '15:25:00', '22:25:00', 1),
+(91, 2, NULL, NULL, 1, '2021-07-17', '23:45:00', '01:45:00', 1),
+(92, 81, NULL, NULL, 1, '2021-06-29', '06:45:00', '07:45:00', 1),
+(93, 2, NULL, NULL, 1, '2021-06-30', '03:45:00', '05:45:00', 1),
+(94, 81, NULL, NULL, 1, '2021-06-22', '01:45:00', '02:45:00', 1),
+(95, 59, NULL, NULL, 2, '2022-05-03', '21:45:00', '23:45:00', 1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `daily`
+-- Table structure for table `daily`
 --
 
 CREATE TABLE `daily` (
@@ -72,15 +73,25 @@ CREATE TABLE `daily` (
   `matkhaudaily` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `daily`
+--
+
+INSERT INTO `daily` (`iddaily`, `tendaily`, `matkhaudaily`) VALUES
+(1, 'Đà Nẵng', ''),
+(2, 'HCM - QUẬN 1', ''),
+(3, 'Hà Nội', ''),
+(4, 'Hà Nội 2', '');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `dsmaybay`
+-- Table structure for table `dsmaybay`
 --
 
 CREATE TABLE `dsmaybay` (
   `id` int(11) NOT NULL,
-  `tenmaybay` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `anh` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `soghethuong` int(3) NOT NULL,
   `soghethuonggia` int(2) NOT NULL,
@@ -90,10 +101,10 @@ CREATE TABLE `dsmaybay` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `dsmaybay`
+-- Dumping data for table `dsmaybay`
 --
 
-INSERT INTO `dsmaybay` (`id`, `tenmaybay`, `anh`, `soghethuong`, `soghethuonggia`, `loaimaybay`, `area_production`, `hangmb`) VALUES
+INSERT INTO `dsmaybay` (`id`, `name`, `anh`, `soghethuong`, `soghethuonggia`, `loaimaybay`, `area_production`, `hangmb`) VALUES
 (1, 'Airbus A321-200', 'airbus.jpg', 168, 16, NULL, NULL, 1),
 (2, 'Airbus A321neo', 'airbusa321.jpg', 195, 8, NULL, NULL, 2),
 (3, 'Airbus A350-900', 'airbusa350.jpg', 231, 29, NULL, NULL, 3),
@@ -102,7 +113,7 @@ INSERT INTO `dsmaybay` (`id`, `tenmaybay`, `anh`, `soghethuong`, `soghethuonggia
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `giave`
+-- Table structure for table `giave`
 --
 
 CREATE TABLE `giave` (
@@ -114,7 +125,7 @@ CREATE TABLE `giave` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `giave`
+-- Dumping data for table `giave`
 --
 
 INSERT INTO `giave` (`id`, `giavethuong`, `giavethuonggia`, `idchuyenbay`, `giamgia`) VALUES
@@ -132,12 +143,13 @@ INSERT INTO `giave` (`id`, `giavethuong`, `giavethuonggia`, `idchuyenbay`, `giam
 (32, 400000, 800000, 91, 20),
 (33, 800000, 700000, 92, 30),
 (34, 800000, 1000000, 93, 45),
-(35, 500000, 900000, 94, 50);
+(35, 500000, 900000, 94, 50),
+(36, 1000000, 3000000, 95, 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hangbay`
+-- Table structure for table `hangbay`
 --
 
 CREATE TABLE `hangbay` (
@@ -148,7 +160,7 @@ CREATE TABLE `hangbay` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hdchitiet`
+-- Table structure for table `hdchitiet`
 --
 
 CREATE TABLE `hdchitiet` (
@@ -167,7 +179,7 @@ CREATE TABLE `hdchitiet` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `hdchitiet`
+-- Dumping data for table `hdchitiet`
 --
 
 INSERT INTO `hdchitiet` (`id`, `idhd`, `idchuyenbay`, `vitringoi`, `hangghe`, `giatien`, `tenkh`, `gioitinh`, `dienthoai`, `cmnd`, `gmail`, `random`) VALUES
@@ -204,12 +216,15 @@ INSERT INTO `hdchitiet` (`id`, `idhd`, `idchuyenbay`, `vitringoi`, `hangghe`, `g
 (190, 220, 81, '7', '1', 500000, 'Trần Quang Nhân', '0', '0924698776', 12121212, 'tranquangnhan1606@gmail.com', 506058),
 (191, 220, 81, '12', '1', 500000, 'Trần Đại Hoàng', '0', '0924698776', 12121212, 'tranquangnhan1606@gmail.com', 506058),
 (192, 221, 81, '7', '1', 500000, 'Trần Quang Nhân', '0', '0924698776', 12121212, 'tranquangnhan1606@gmail.com', 572561),
-(193, 221, 81, '12', '1', 500000, 'Trần Đại Hoàng', '0', '0924698776', 12121212, 'minhphuong11pm@gmail.com', 572561);
+(193, 221, 81, '12', '1', 500000, 'Trần Đại Hoàng', '0', '0924698776', 12121212, 'minhphuong11pm@gmail.com', 572561),
+(194, 222, 84, '26', '2', 1300000, 'Thân Trọng Thắng', '0', '0999111222', 111222333, 't@mail.com', 849519),
+(195, 223, 80, '9', '2', 700000, 'Thân Trọng Thắng', '2', '0888111222', 111222333, 'thangthantrong@gmail.com', 150975),
+(196, 224, 80, '8', '2', 700000, 'Thân Trọng Thắng', '0', '0886997189', 111222111, 'thangthantrong@gmail.com', 668724);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hoadon`
+-- Table structure for table `hoadon`
 --
 
 CREATE TABLE `hoadon` (
@@ -222,7 +237,7 @@ CREATE TABLE `hoadon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `hoadon`
+-- Dumping data for table `hoadon`
 --
 
 INSERT INTO `hoadon` (`id`, `ngaydatve`, `trangthai`, `idkh`, `tongtien`, `iddaily`) VALUES
@@ -253,12 +268,15 @@ INSERT INTO `hoadon` (`id`, `ngaydatve`, `trangthai`, `idkh`, `tongtien`, `iddai
 (218, '2020-12-17 22:36:59', 2, NULL, 500000, 0),
 (219, '2020-12-17 22:55:53', 2, NULL, 1000000, 0),
 (220, '2020-12-18 07:12:01', 2, NULL, 1000000, 0),
-(221, '2020-12-18 07:55:28', 2, NULL, 1000000, 0);
+(221, '2020-12-18 07:55:28', 2, NULL, 1000000, 0),
+(222, '2022-04-30 22:20:02', 2, NULL, 1300000, NULL),
+(223, '2022-05-02 19:43:21', 2, NULL, 700000, 3),
+(224, '2022-05-03 17:32:17', 2, NULL, 700000, 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `khachhang`
+-- Table structure for table `khachhang`
 --
 
 CREATE TABLE `khachhang` (
@@ -276,36 +294,25 @@ CREATE TABLE `khachhang` (
   `thanhpho` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `tichdiem` int(3) DEFAULT '10',
   `randomkey` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `cmnd` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
+  `cmnd` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `iddaily` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `khachhang`
+-- Dumping data for table `khachhang`
 --
 
-INSERT INTO `khachhang` (`id`, `tenKH`, `user`, `gioitinh`, `role`, `pass`, `kichhoat`, `email`, `avatar`, `sodienthoai`, `diachi`, `thanhpho`, `tichdiem`, `randomkey`, `cmnd`) VALUES
-(22, '', 'admin', 0, 1, '111111', 0, NULL, NULL, NULL, NULL, NULL, 10, NULL, NULL),
-(45, NULL, 'anhduoc123', 1, 0, '123456', 1, 'duocnvoit@gmail.com', NULL, '0359020898', NULL, NULL, 10, 'd98c1545b7619bd99b817cb3169cdfde', NULL),
-(46, NULL, 'duocnv', 1, 0, '12345678', 1, 'duocnv2oit@gmail.com', NULL, '0928817228', NULL, NULL, 10, '590f713356c5c1fb7d74a0e589166b5a', NULL),
-(47, NULL, 'demo', 1, 0, '123456', 1, 'thangthantrong@gmail.com', NULL, '0886997189', NULL, NULL, 10, 'fba058470460d044d887af9c598f1cb3', NULL);
+INSERT INTO `khachhang` (`id`, `tenKH`, `user`, `gioitinh`, `role`, `pass`, `kichhoat`, `email`, `avatar`, `sodienthoai`, `diachi`, `thanhpho`, `tichdiem`, `randomkey`, `cmnd`, `iddaily`) VALUES
+(22, '', 'admin', 0, 1, '111111', 0, NULL, NULL, NULL, NULL, NULL, 10, NULL, NULL, 0),
+(45, NULL, 'anhduoc123', 1, 0, '123456', 1, 'duocnvoit@gmail.com', NULL, '0359020898', NULL, NULL, 10, 'd98c1545b7619bd99b817cb3169cdfde', NULL, 0),
+(46, NULL, 'duocnv', 1, 0, '12345678', 1, 'duocnv2oit@gmail.com', NULL, '0928817228', NULL, NULL, 10, '590f713356c5c1fb7d74a0e589166b5a', NULL, 0),
+(47, NULL, 'demo', 1, 0, '123456', 1, 'thangthantrong@gmail.com', NULL, '0886997189', NULL, NULL, 10, 'fba058470460d044d887af9c598f1cb3', NULL, 0),
+(48, 'nhanvienhn', 'hanoi', 2, 0, '123456', 0, 'thangthantrong@gmail.com', '', '0888999111', '', '', 0, '7ef2f13f0e9d3478d7c36f6483d38a86', NULL, 3);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nhanvien`
---
-
-CREATE TABLE `nhanvien` (
-  `idnhanvien` int(12) NOT NULL,
-  `tennhanvien` varchar(55) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `sodienthoai` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `matkhaunhanvien` varchar(11) COLLATE utf8_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `payments`
+-- Table structure for table `payments`
 --
 
 CREATE TABLE `payments` (
@@ -321,7 +328,7 @@ CREATE TABLE `payments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `payments`
+-- Dumping data for table `payments`
 --
 
 INSERT INTO `payments` (`id`, `idhd`, `order_id`, `money`, `note`, `vnp_response_code`, `code_vnpay`, `code_bank`, `time`) VALUES
@@ -330,7 +337,7 @@ INSERT INTO `payments` (`id`, `idhd`, `order_id`, `money`, `note`, `vnp_response
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sanbay`
+-- Table structure for table `sanbay`
 --
 
 CREATE TABLE `sanbay` (
@@ -341,7 +348,7 @@ CREATE TABLE `sanbay` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `sanbay`
+-- Dumping data for table `sanbay`
 --
 
 INSERT INTO `sanbay` (`idsanbay`, `tensanbay`, `masanbay`, `tinh`) VALUES
@@ -371,7 +378,7 @@ INSERT INTO `sanbay` (`idsanbay`, `tensanbay`, `masanbay`, `tinh`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `trangthaidatve`
+-- Table structure for table `trangthaidatve`
 --
 
 CREATE TABLE `trangthaidatve` (
@@ -382,19 +389,19 @@ CREATE TABLE `trangthaidatve` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `trangthaidatve`
+-- Dumping data for table `trangthaidatve`
 --
 
 INSERT INTO `trangthaidatve` (`id`, `ttghethuong`, `ttghethuonggia`, `idchuyenbay`) VALUES
-(44, '1,1,1,0-127.0.0.1,1,1,1,1,1,1,1,1,1,1,0-127.0.0.1,0,0-127.0.0.1,0-127.0.0.1,0-127.0.0.1,0-127.0.0.1,0,0,0,0,0,0,2-::1,2-::1,0,0,0,0,0,0,0,0,2-127.0.0.1,2-127.0.0.1,2-127.0.0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1', '0,0,0,2-::1,0,0,0,0,0,2-127.0.0.1,2-127.0.0.1,2-127.0.0.1,0,0,0,0', 80),
+(44, '1,1,1,0-127.0.0.1,1,1,1,1,1,1,1,1,1,1,0-127.0.0.1,0,0-127.0.0.1,0-127.0.0.1,0-127.0.0.1,0-127.0.0.1,0,0,0,0,0,0,2-::1,2-::1,0,0,0,0,0,0,0,0,2-127.0.0.1,2-127.0.0.1,2-127.0.0.1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1', '0,0,0,0,0,0,0,0,0,2-127.0.0.1,2-127.0.0.1,2-127.0.0.1,0,0,0,0', 80),
 (45, '1,0,0,1,0,0,1,1,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2-::1,0,0,0,0,0,2-::1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', '0,2-::1,2-::1,0,2-::1,0,0,0', 81),
 (46, '1,1,0,0-::1,0-::1,0-::1,0,0,0,0-::1,0-::1,0-::1,0,0-::1,0-::1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', '0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', 86),
 (47, '2,0,0,0,0,0,0,0,0,0,0,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', '0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', 87),
 (48, '1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', '0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', 90),
-(49, '1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', '0-::1,0,0,0-::1,0-::1,0-::1,0-::1,0', 83),
+(49, '1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', '0-::1,0,2-::1,0-::1,0-::1,0-::1,0-::1,0', 83),
 (50, '1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', '0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', 82),
-(51, '1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', '0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', 85),
-(52, '0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', '0,0,0,0-::1,0,0-::1,0,0,0,0,0-::1,0,0,0,0-::1,0,0,0,0,0,0,0,0,0,0,0,0,0,0', 84),
+(51, '1,0,0,0,0,0,0,0,2-::1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', '0,0,0,0,0,0,0,0,0,0,0,0,0,2-::1,0,0,0,0,0,0', 85),
+(52, '0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', '0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2-::1,0,0,0,0,0,0,0,0,0,0,0,0,0', 84),
 (53, '1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', '0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', 88),
 (54, '1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', '0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', 89),
 (55, '0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', '0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0', 91),
@@ -405,7 +412,7 @@ INSERT INTO `trangthaidatve` (`id`, `ttghethuong`, `ttghethuonggia`, `idchuyenba
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tuyenduong`
+-- Table structure for table `tuyenduong`
 --
 
 CREATE TABLE `tuyenduong` (
@@ -415,7 +422,7 @@ CREATE TABLE `tuyenduong` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tuyenduong`
+-- Dumping data for table `tuyenduong`
 --
 
 INSERT INTO `tuyenduong` (`id`, `iddiemdi`, `iddiemden`) VALUES
@@ -427,166 +434,144 @@ INSERT INTO `tuyenduong` (`id`, `iddiemdi`, `iddiemden`) VALUES
 (81, 5, 14);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `chuyenbay`
+-- Indexes for table `chuyenbay`
 --
 ALTER TABLE `chuyenbay`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_chuyenbay_dsmaybay` (`idmaybay`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `daily`
+-- Indexes for table `daily`
 --
 ALTER TABLE `daily`
   ADD PRIMARY KEY (`iddaily`);
 
 --
--- Chỉ mục cho bảng `dsmaybay`
+-- Indexes for table `dsmaybay`
 --
 ALTER TABLE `dsmaybay`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `giave`
+-- Indexes for table `giave`
 --
 ALTER TABLE `giave`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `hangbay`
+-- Indexes for table `hangbay`
 --
 ALTER TABLE `hangbay`
   ADD PRIMARY KEY (`idhang`);
 
 --
--- Chỉ mục cho bảng `hdchitiet`
+-- Indexes for table `hdchitiet`
 --
 ALTER TABLE `hdchitiet`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_hoadon` (`idhd`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `hoadon`
+-- Indexes for table `hoadon`
 --
 ALTER TABLE `hoadon`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `khachhang`
+-- Indexes for table `khachhang`
 --
 ALTER TABLE `khachhang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `nhanvien`
---
-ALTER TABLE `nhanvien`
-  ADD PRIMARY KEY (`idnhanvien`);
-
---
--- Chỉ mục cho bảng `sanbay`
+-- Indexes for table `sanbay`
 --
 ALTER TABLE `sanbay`
   ADD PRIMARY KEY (`idsanbay`);
 
 --
--- Chỉ mục cho bảng `trangthaidatve`
+-- Indexes for table `trangthaidatve`
 --
 ALTER TABLE `trangthaidatve`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_ttdatve_chuyenbay` (`idchuyenbay`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `tuyenduong`
+-- Indexes for table `tuyenduong`
 --
 ALTER TABLE `tuyenduong`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_tuyenduong_chuyenbay_diemden` (`iddiemden`),
-  ADD KEY `fk_tuyenduong_chuyenbay_diemdi` (`iddiemdi`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `daily`
+-- AUTO_INCREMENT for table `chuyenbay`
+--
+ALTER TABLE `chuyenbay`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+
+--
+-- AUTO_INCREMENT for table `daily`
 --
 ALTER TABLE `daily`
-  MODIFY `iddaily` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `iddaily` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `giave`
+-- AUTO_INCREMENT for table `dsmaybay`
+--
+ALTER TABLE `dsmaybay`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `giave`
 --
 ALTER TABLE `giave`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
--- AUTO_INCREMENT cho bảng `hangbay`
+-- AUTO_INCREMENT for table `hangbay`
 --
 ALTER TABLE `hangbay`
   MODIFY `idhang` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `hdchitiet`
+-- AUTO_INCREMENT for table `hdchitiet`
 --
 ALTER TABLE `hdchitiet`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=194;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=197;
 
 --
--- AUTO_INCREMENT cho bảng `khachhang`
+-- AUTO_INCREMENT for table `hoadon`
+--
+ALTER TABLE `hoadon`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=225;
+
+--
+-- AUTO_INCREMENT for table `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
--- AUTO_INCREMENT cho bảng `nhanvien`
+-- AUTO_INCREMENT for table `sanbay`
 --
-ALTER TABLE `nhanvien`
-  MODIFY `idnhanvien` int(12) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `sanbay`
+  MODIFY `idsanbay` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT cho bảng `trangthaidatve`
+-- AUTO_INCREMENT for table `trangthaidatve`
 --
 ALTER TABLE `trangthaidatve`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
--- AUTO_INCREMENT cho bảng `tuyenduong`
+-- AUTO_INCREMENT for table `tuyenduong`
 --
 ALTER TABLE `tuyenduong`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
-
---
--- Các ràng buộc cho các bảng đã đổ
---
-
---
--- Các ràng buộc cho bảng `chuyenbay`
---
-ALTER TABLE `chuyenbay`
-  ADD CONSTRAINT `fk_chuyenbay_dsmaybay` FOREIGN KEY (`idmaybay`) REFERENCES `dsmaybay` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Các ràng buộc cho bảng `hdchitiet`
---
-ALTER TABLE `hdchitiet`
-  ADD CONSTRAINT `FK_hoadon` FOREIGN KEY (`idhd`) REFERENCES `hoadon` (`id`);
-
---
--- Các ràng buộc cho bảng `trangthaidatve`
---
-ALTER TABLE `trangthaidatve`
-  ADD CONSTRAINT `fk_ttdatve_chuyenbay` FOREIGN KEY (`idchuyenbay`) REFERENCES `chuyenbay` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Các ràng buộc cho bảng `tuyenduong`
---
-ALTER TABLE `tuyenduong`
-  ADD CONSTRAINT `fk_tuyenduong_chuyenbay_diemden` FOREIGN KEY (`iddiemden`) REFERENCES `sanbay` (`idsanbay`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_tuyenduong_chuyenbay_diemdi` FOREIGN KEY (`iddiemdi`) REFERENCES `sanbay` (`idsanbay`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
