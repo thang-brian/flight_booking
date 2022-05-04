@@ -73,7 +73,7 @@
                                 <div class="yoo-toggle-btn yoo-profile-nav-btn">
                                     <div class="yoo-profile-nav-text mt-2">
                                         <h6 class="my-0"><?php echo $_SESSION['suser'];?></h6>
-                                        <a href="controllers/login.php?act=logout&idout=1" class="text-warning">Đăng Xuất ?</a>
+                                        <a href="/ban-ve-may-bay/admin/controllers/login.php?act=logout&idout=1" class="text-warning">Đăng Xuất ?</a>
                                     </div>
                                     <div class="yoo-profile-nav-img">
                                         <?php if(isset($_SESSION['adimg'])) {?>
@@ -141,7 +141,7 @@
                                 </div>
                             </li> -->
 
-                            <li class="<?php if(isset($_GET['ctrl']) &&$_GET['ctrl']=="loaihang") echo "active";?>">
+                            <!-- <li class="<?php if(isset($_GET['ctrl']) &&$_GET['ctrl']=="loaihang") echo "active";?>">
                                 <div class="nav-link">
                                     <div class="nav-main__icon" ><label for="bv"><svg width="25" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M368 96H144a16 16 0 010-32h224a16 16 0 010 32zM400 144H112a16 16 0 010-32h288a16 16 0 010 32zM419.13 448H92.87A44.92 44.92 0 0148 403.13V204.87A44.92 44.92 0 0192.87 160h326.26A44.92 44.92 0 01464 204.87v198.26A44.92 44.92 0 01419.13 448z"></path></svg></label></div>
                                     <div class="nav-main__text "><div id="bv" class="click_title">Danh Mục</div>
@@ -153,11 +153,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </li>
+                            </li> -->
                             <li class="<?php if(isset($_GET['ctrl']) &&$_GET['ctrl']=="ve") echo "active";?>">
                                 <div class="nav-link">
                                     <div class="nav-main__icon" ><label for="bv"><svg width="25" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M440.9 136.3a4 4 0 000-6.91L288.16 40.65a64.14 64.14 0 00-64.33 0L71.12 129.39a4 4 0 000 6.91L254 243.88a4 4 0 004.06 0zM54 163.51a4 4 0 00-6 3.49v173.89a48 48 0 0023.84 41.39L234 479.51a4 4 0 006-3.46V274.3a4 4 0 00-2-3.46zM272 275v201a4 4 0 006 3.46l162.15-97.23A48 48 0 00464 340.89V167a4 4 0 00-6-3.45l-184 108a4 4 0 00-2 3.45z"></path></svg></label></div>
-                                    <div class="nav-main__text "><div id="bv" class="click_title">Vé Máy Bay</div>
+                                    <div class="nav-main__text "><div id="bv" class="click_title">Chuyến Bay</div>
                                         <div class="menu-alert">
                                             <ul>
                                                 <li><a href="/ban-ve-may-bay/admin/index.php?ctrl=ve&act=add">Thêm Mới</a></li>
@@ -180,7 +180,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="<?php if(isset($_GET['ctrl']) &&$_GET['ctrl']=="lienhe") echo "active";?>">
+                            <!-- <li class="<?php if(isset($_GET['ctrl']) &&$_GET['ctrl']=="lienhe") echo "active";?>">
                                 <div class="nav-link">
                                     <div class="nav-main__icon" ><label for="bv"><svg width="25" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M440.9 136.3a4 4 0 000-6.91L288.16 40.65a64.14 64.14 0 00-64.33 0L71.12 129.39a4 4 0 000 6.91L254 243.88a4 4 0 004.06 0zM54 163.51a4 4 0 00-6 3.49v173.89a48 48 0 0023.84 41.39L234 479.51a4 4 0 006-3.46V274.3a4 4 0 00-2-3.46zM272 275v201a4 4 0 006 3.46l162.15-97.23A48 48 0 00464 340.89V167a4 4 0 00-6-3.45l-184 108a4 4 0 00-2 3.45z"></path></svg></label></div>
                                     <div class="nav-main__text "><div id="bv" class="click_title">Liên Hệ</div>
@@ -191,7 +191,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </li>
+                            </li> -->
                             <li class="<?php if(isset($_GET['ctrl']) &&$_GET['ctrl']=="hoadon") echo "active";?>">
                                 <div class="nav-link">
                                 <div class="nav-main__icon"><svg  width="25" xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M396 432H136c-36.44 0-70.36-12.57-95.51-35.41C14.38 372.88 0 340 0 304c0-36.58 13.39-68.12 38.72-91.22 18.11-16.53 42.22-28.25 69.18-33.87a16 16 0 0011.37-9.15 156.24 156.24 0 0142.05-56C187.76 91.69 220.5 80 256 80a153.57 153.57 0 01107.14 42.9c24.73 23.81 41.5 55.28 49.18 92a16 16 0 0012.12 12.39C470 237.42 512 270.43 512 328c0 33.39-12.24 60.78-35.41 79.23C456.23 423.43 428.37 432 396 432z"></path></svg></div>

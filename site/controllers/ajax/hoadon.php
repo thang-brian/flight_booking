@@ -23,6 +23,12 @@
                 
                 $ngayDatVe = date('Y-m-d H:i:s');
 
+                if(isset($_SESSION['daily'])){
+                    $iddaily = $_SESSION['daily'];
+                }else{
+                    $iddaily = 0;
+                }
+
                 // add chuyến 1 chiều
                 if(!isset($_SESSION['idchuyenbay'])){
                     $idChuyenBay = $_SESSION['idchuyenbaykh'];
@@ -39,7 +45,7 @@
                     }
                     $tongTien =  $giaTien * count($_SESSION['vitrighekh']);
                     
-                    $lastId = addhoadon($ngayDatVe,1,$tongTien);
+                    $lastId = addhoadon($ngayDatVe,1,$tongTien,$iddaily);
 
                     $_SESSION['idhd'] =  $lastId ;
 

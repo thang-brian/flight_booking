@@ -10,7 +10,7 @@ async function chonVe(idChuyenBay) {
     });
     if (idChuyenBay) {
         Loading.close();
-        window.location.href = ('?ctrl=timve&act=chonve&idcb=' + idChuyenBay + '&loaighe=' + loaighe);
+        window.location.href = ('/ban-ve-may-bay/admin/index.php?ctrl=timve&act=chonve&idcb=' + idChuyenBay + '&loaighe=' + loaighe);
     }
 }
 
@@ -220,6 +220,8 @@ $("#tieptucthuonggia").click(function(e) {
                                 var arr = [];
                                 let idchuyenbay = $("#idcb").val();
                                 //lấy tất cả ghế đánh dấu
+                                // get ip
+                                let ip = getIp();
                                 $(".l-ghe-thuonggia.l-ghe-active").each(function(index, element) {
                                     var idGhe = $(this);
                                     idGhe = idGhe.html();

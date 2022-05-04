@@ -16,20 +16,20 @@ function xoakhachhang($id){
     $sql = "DELETE FROM khachhang WHERE id=".$id;
     exec1($sql);
 }
-function addkh($tenkh,$user,$gioitinh,$role,$pass,$email,$imgupload,$sodienthoai,$diachi,$thanhpho,$tichdiem,$randomkey){
-    $sql = "INSERT INTO khachhang (tenKh,user,gioitinh,role,pass,email,avatar,sodienthoai,diachi,thanhpho,tichdiem,randomkey) VALUES 
-        ('{$tenkh}','{$user}','{$gioitinh}', '{$role}', '{$pass}','{$email}','{$imgupload}','{$sodienthoai}','{$diachi}','{$thanhpho}', '{$tichdiem}', '{$randomkey}')";
+function addkh($tenkh,$user,$gioitinh,$role,$pass,$email,$imgupload,$sodienthoai,$diachi,$thanhpho,$tichdiem,$randomkey,$daily){
+    $sql = "INSERT INTO khachhang (tenKh,user,gioitinh,role,pass,email,avatar,sodienthoai,diachi,thanhpho,tichdiem,randomkey,iddaily) VALUES 
+        ('{$tenkh}','{$user}','{$gioitinh}', '{$role}', '{$pass}','{$email}','{$imgupload}','{$sodienthoai}','{$diachi}','{$thanhpho}', '{$tichdiem}', '{$randomkey}','{$daily}')";
     return getLastId($sql);
 }
 function showkhedit($id){ //xác định trả về một hay nhiều giá trị ?
     $sql = "select * from khachhang where id=?";
     return result1(1,$sql,$id);
 }
-function updatekh($id,$tenkh,$user,$gioitinh,$role,$pass,$email,$imgupload,$sodienthoai,$diachi,$thanhpho,$tichdiem,$randomkey){
+function updatekh($id,$tenkh,$user,$gioitinh,$role,$pass,$email,$imgupload,$sodienthoai,$diachi,$thanhpho,$tichdiem,$randomkey,$daily){
     if(!$imgupload)   {
-        $sql = "UPDATE khachhang SET tenKH='{$tenkh}', user='{$user}',gioitinh ='{$gioitinh}', role = '{$role}', pass = '{$pass}' ,email='{$email}',sodienthoai='{$sodienthoai}',diachi='{$diachi}', thanhpho = '{$thanhpho}', tichdiem = '{$tichdiem}'  WHERE id=".$id;
+        $sql = "UPDATE khachhang SET tenKH='{$tenkh}', user='{$user}',gioitinh ='{$gioitinh}', role = '{$role}', pass = '{$pass}' ,email='{$email}',sodienthoai='{$sodienthoai}',diachi='{$diachi}', thanhpho = '{$thanhpho}', tichdiem = '{$tichdiem}',iddaily = '{$daily}'  WHERE id=".$id;
     }else{
-        $sql = "UPDATE khachhang SET tenKH='{$tenkh}', user='{$user}',gioitinh ='{$gioitinh}', role = '{$role}', pass = '{$pass}' ,email='{$email}',avatar='{$imgupload}',sodienthoai='{$sodienthoai}',diachi='{$diachi}', thanhpho = '{$thanhpho}', tichdiem = '{$tichdiem}'  WHERE id=".$id;
+        $sql = "UPDATE khachhang SET tenKH='{$tenkh}', user='{$user}',gioitinh ='{$gioitinh}', role = '{$role}', pass = '{$pass}' ,email='{$email}',avatar='{$imgupload}',sodienthoai='{$sodienthoai}',diachi='{$diachi}', thanhpho = '{$thanhpho}', tichdiem = '{$tichdiem}',iddaily = '{$daily}'  WHERE id=".$id;
     }
     execute1($sql);  
 }
@@ -67,4 +67,9 @@ function checkUserSignupAdmin($user,$pass){
 function showHdCt($idhd){
     $sql = "SELECT * FROM hdchitiet WHERE idhd=".$idhd;
     return result1(1,$sql);
+}
+
+function showalldaily(){
+    $sql = "SELECT iddaily,tendaily FROM daily";
+    return result1(0,$sql);
 }

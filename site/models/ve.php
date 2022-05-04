@@ -55,6 +55,25 @@ function huyGhe($idGhe,$idChuyenBay,$loaiGhe,$ip)
     }
     return true;
 }
+function huyGhett($idGhe,$idChuyenBay,$loaiGhe,$ip)
+{
+    $sql = "SELECT ".$loaiGhe." FROM trangthaidatve WHERE idchuyenbay=".$idChuyenBay;
+    $result = result1(1,$sql)[$loaiGhe];
+    $arr =  explode(",",$result);
+    $vitri =($idGhe-1);
+   
+    $temp = explode('-',$arr[$vitri]);
+
+    if($temp[0] == '2'){
+        if($temp[1] == $ip){
+            $arr[$vitri] = 0 ;
+        }
+    }
+  
+    $kq = implode(",",$arr);
+    $sql = "UPDATE trangthaidatve  SET ".$loaiGhe."='{$kq}' WHERE idchuyenbay=".$idChuyenBay;
+    return exec1($sql);
+} 
 // render html to view
 function renderHtml($idChuyenBay,$loaiGhe)
 {
@@ -88,9 +107,11 @@ function renderHtml($idChuyenBay,$loaiGhe)
             $active = '';
         }
         if(($bien % 4) ===0 ){
-            $kq .= '<div class="'.$class.' l-div-hover d-inline-block s-large '.$active.' mr-right-10pt">' . ($i+1). '</div>';
+            if($active == 'l-ghe-active'){$ip = $temp[1];}else{$ip = '';}
+            $kq .= '<div class="'.$class.' l-div-hover d-inline-block s-large '.$active.' mr-right-10pt '.$ip.'">' . ($i+1). '</div>';
         }else{
-            $kq .= '<div class="'.$class.' l-div-hover d-inline-block s-large '.$active.'" >' . ($i+1). '</div>';
+            if($active == 'l-ghe-active'){$ip = $temp[1];}else{$ip = '';}
+            $kq .= '<div class="'.$class.' l-div-hover d-inline-block s-large '.$active.' '.$ip.'">' . ($i+1). '</div>';
         }
     }
     return $kq;
@@ -194,6 +215,11 @@ function setThanhCong($idhd){
 function addradom($id,$random){
     $sql = "INSERT INTO hdchitiet(random) values('{$random}') where id ='$id' ";
     exec1($sql);
+}
+function showtendl($iddaily){
+    $sql = "SELECT * FROM daily WHERE iddaily = '$iddaily'";
+    $temp = result1(1,$sql);
+    return $temp['tendaily'];
 }
  
 ?>

@@ -13,8 +13,10 @@
             if(isset($_GET['idedit'])&&($_GET['idedit'])){
                 $_SESSION['idedit'] = $_GET['idedit'];
                 $showkhedit = showkhedit($_SESSION['idedit']);
+                $showalldl = showalldaily();
                 include_once "views/khachhangedit.php";
             }else{
+                $showalldl = showalldaily();
                 include_once "views/khachhangadd.php";
             }
             if(isset($_POST['them'])&&($_POST['them'])||isset($_POST['sua'])&&($_POST['sua'])){
@@ -37,6 +39,7 @@
                 $thanhpho = stripTags($_POST['thanhpho']);
                 $tichdiem= $_POST['tichdiem'];
                 $randomkey = md5(rand(0,99999));
+                $daily = $_POST['daily'];
 
                 settype( $gioitinh,"int");
                 settype($role,"int");
@@ -44,9 +47,10 @@
 
                 settype($tichdiem,"int");
                 if(isset($_GET['idedit'])&&($_GET['idedit'])){
-                    updatekh($_GET['idedit'],$tenkh,$user,$gioitinh,$role,$pass,$email,$imgupload,$sodienthoai,$diachi,$thanhpho,$tichdiem,$randomkey); 
+                    $showalldl = showalldaily();
+                    updatekh($_GET['idedit'],$tenkh,$user,$gioitinh,$role,$pass,$email,$imgupload,$sodienthoai,$diachi,$thanhpho,$tichdiem,$randomkey,$daily); 
                 }else{
-                    $lastId = addkh($tenkh,$user,$gioitinh,$role,$pass,$email,$imgupload,$sodienthoai,$diachi,$thanhpho,$tichdiem,$randomkey);
+                    $lastId = addkh($tenkh,$user,$gioitinh,$role,$pass,$email,$imgupload,$sodienthoai,$diachi,$thanhpho,$tichdiem,$randomkey,$daily);
                     // start mail
                     $idUser = $lastId;
 

@@ -76,6 +76,10 @@ $("#huyghe").click(function(e) {
                                     if (JSON.parse(response).StatusCode == 1) {
                                         window.location.reload();
                                     }
+                                },
+                                complete: function() {
+                                    const element = document.getElementById("demo");
+                                    element.remove();
                                 }
                             });
                         }
@@ -250,13 +254,17 @@ $("#tieptucthuonggia").click(function(e) {
                             }
                             if (response.StatusCode == '0') {
                                 var arrkh = [];
+                                var ip = document.getElementById('ipad').value;
                                 let idchuyenbaykh = $("#idcb").val();
                                 //lấy tất cả ghế đánh dấu
                                 $(".l-ghe-thuonggia.l-ghe-active").each(function(index, element) {
-                                    var idGhe = $(this);
-                                    idGhe = idGhe.html();
-                                    arrkh.push(idGhe);
+                                    if($('.l-ghe-active').hasClass(ip)){
+                                        var idGhe = $(this);
+                                        idGhe = idGhe.html();
+                                        arrkh.push(idGhe);
+                                    }
                                 });
+                                alert(arrkh);
 
                                 //push
                                 await $.ajax({

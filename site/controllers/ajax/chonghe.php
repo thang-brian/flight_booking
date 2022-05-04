@@ -125,20 +125,21 @@
             case 'huyghe':
               $Array = array();
               $ip =  get_client_ip();
-              if(huyGhe($_POST['idghe'],$_POST['idcb'],'ttghethuong',$ip)){
+              if(huyGhett($_POST['idghe'],$_POST['idcb'],'ttghethuong',$ip)){
                 $Array['StatusCode'] = 1;
               }else{
                 $Array['StatusCode'] = 0;
               }
-              var_dump($Array);
+              // var_dump($Array);
               echo json_encode($Array);
               return;
               break;
             case 'huyghekh':
               $Array = array();
               $ip =  get_client_ip();
-              if(huyGhe($_POST['idghekh'],$_POST['idcbkh'],'ttghethuonggia',$ip)){
+              if(huyGhett($_POST['idghekh'],$_POST['idcbkh'],'ttghethuonggia',$ip)){
                 $Array['StatusCode'] = 1;
+                
               }else{
                 $Array['StatusCode'] = 0;
               }

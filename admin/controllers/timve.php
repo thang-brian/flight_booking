@@ -12,7 +12,7 @@ switch ($act) {
         echo '<script src="views/javascripts/datve.js"></script>';
         break;
     case 'showve':
-        echo '<script src="views/jquery/chonve.js"></script>';
+        echo '<script src="/ban-ve-may-bay/admin/views/jquery/chonve.js"></script>';
         $Array = array();
 
         $showSanBay = showsanbay();

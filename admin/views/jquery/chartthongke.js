@@ -57,7 +57,7 @@ $(document).ready(function() {
             // khoi tao ajax
             $.ajax({ // gưi du lieu  len bang ạjax
                 type: "POST",
-                url: 'controllers/ajax/thongke.php',
+                url: '/ban-ve-may-bay/admin/controllers/ajax/thongke.php',
                 dataType: 'JSON',
                 contentType: false,
                 processData: false,

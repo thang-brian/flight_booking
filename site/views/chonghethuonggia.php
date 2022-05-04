@@ -2,9 +2,9 @@
     <div class="l-bt_next_fixed">
         <a href=""><i class="fas fa-arrow-circle-right" id="tieptucthuonggia"></i></a>
     </div>
-    <div class="l-bt_close" id="huyghe">
+    <!-- <div class="l-bt_close" id="huyghe">
         <a ><i class="fa fa-close"></i></a> 
-    </div>
+    </div> -->
     <div class="text-center">
             <div class="row w-100 mr-0 pd-tb-100px background-cl-3">
                 <div class="l-canh-trai l-position-absolute"></div>
@@ -82,9 +82,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="l-canh-phai l-position-absolute"></div>
+                <div class="l-canh-phai l-position-absolute">
+                    <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                            <h1 class="display-5">Chỗ đã đặt</h1>
+                            <?php var_dump($_SESSION)?>
+                            <div class="bool-seat">
+                                <p class="lead text-center seat-cart" id="">Chỗ: </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         </div>
         </div>
+    <input type="hidden" id="ipad" value="<?php echo $_SESSION['ip'] ?>">
     </main>

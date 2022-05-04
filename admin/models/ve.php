@@ -6,7 +6,7 @@ function showveedit($id)
 }
 function showAllve()
 {
-    $sql = "select * from chuyenbay where 1";
+    $sql = "select * from chuyenbay ORDER BY chuyenbay.id DESC ";
     return result1(0, $sql);
 }
 function showTenmaybay($id){

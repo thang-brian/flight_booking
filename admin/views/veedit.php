@@ -7,7 +7,7 @@ if (is_array($showveedit)) {
     <div class="container-fluid">
         <div class="row d-flex justify-content-between mt-3">
             <div class="col-lg-4 mt-3">
-                <h2>VÉ MÁY BAY</h2>
+                <h2>CHUYẾN BAY</h2>
             </div>
             <div class="col-lg-4 mt-3">
                 <nav aria-label="breadcrumb ">

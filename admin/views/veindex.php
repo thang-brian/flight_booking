@@ -3,16 +3,16 @@
         <div class="container-fluid">
             <div class="row d-flex justify-content-between mt-3">
                 <div class="col-lg-4 text-dark mt-3">
-                    <h2>VÉ MÁY BAY</h2>
+                    <h2>CHUYẾN BAY</h2>
                 </div>
-                <div class="col-lg-3 mt-3">
+                <!-- <div class="col-lg-3 mt-3">
                     <nav aria-label="breadcrumb ">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
                             <li class="breadcrumb-item"><a href="#">Sản Phẩm</a></li>
                         </ol>
                     </nav>
-                </div>
+                </div> -->
             </div>
             <hr>
             <div class="row mt-3">

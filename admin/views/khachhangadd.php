@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="col-lg-9">
                                     <img src="views/img/avt.png" alt="">
-                                    <input type="file" class="form-control-file" name="avatar1[]" id="avatar1" multiple required
+                                    <input type="file" class="form-control-file" name="avatar1[]" id="avatar1" multiple
                                     >
                                 </div>
                             </div>
@@ -112,7 +112,7 @@
                                     <label for=""><strong>Địa Chỉ</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <input type="text" name="diachi" id="" class="form-control" placeholder="Địa Chỉ" aria-describedby="helpId" required>
+                                    <input type="text" name="diachi" id="" class="form-control" placeholder="Địa Chỉ" aria-describedby="helpId">
                                 </div>
                             </div>
                       
@@ -121,7 +121,7 @@
                                     <label for=""><strong>Thành Phố</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <input type="text" name="thanhpho" id="" class="form-control" placeholder="Thành Phố" aria-describedby="helpId" required>
+                                    <input type="text" name="thanhpho" id="" class="form-control" placeholder="Thành Phố" aria-describedby="helpId">
                                 </div>
                             </div>
                             <!-- <div class="row mt-4">
@@ -132,6 +132,21 @@
                                     <input type="number" name="tichdiem" id="" class="form-control" placeholder="Điểm Tích Lũy" aria-describedby="helpId" >
                                 </div>
                             </div>  -->
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <label for=""><strong>Đại lý</strong></label>
+                                </div>
+                                <div class="col-lg-9">
+                                    <select class="custom-select form-control" name="daily" id="">
+                                        <option value="" selected>Chọn</option>
+                                        <?php
+                                            foreach ($showalldl as $item) {
+                                                echo '<option value="'.$item['iddaily'].'">'.$item['tendaily'].'</option>';
+                                            }         
+                                        ?>
+                                    </select>
+                                </div>
+                            </div>
                             <div class="row mt-5">
                                 <div class="col-lg-3"></div>
                                 <div class="col-lg-9 ">

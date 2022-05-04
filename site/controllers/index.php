@@ -21,6 +21,16 @@ require_once "models/giamgia.php";
 
 require_once "models/timve.php";
 
+// require_once "../lib/PHPMailer-master/src/PHPMailer.php";
+// require_once "../lib/PHPMailer-master/src/Exception.php";
+// require_once "../lib/PHPMailer-master/src/OAuth.php";
+// require_once "../lib/PHPMailer-master/src/POP3.php";
+// require_once "../lib/PHPMailer-master/src/SMTP.php";
+ 
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\SMTP;
+// use PHPMailer\PHPMailer\Exception;
+
 
 if (!isset($_GET['act']) || ($_GET['act'] == 'home')) {
     require_once "views/layouts/header_home.php";
@@ -165,6 +175,8 @@ if (isset($_GET['act'])) {
             if (isset($_GET['logout']) && ($_GET['logout']) == 1) {
                 unset($_SESSION['sid']);
                 unset($_SESSION['suser']);
+                unset($_SESSION['daily']);
+                unset($_SESSION['thongbao']);
                 echo '<script>window.location.href = "index.php"</script>';
             }
             break;
@@ -230,7 +242,6 @@ if (isset($_GET['act'])) {
                 $checkEmail = checkEmailTonTai($email);
                 $idUser = $checkEmail['id'];
                 $user = $checkEmail['user'];
-                var_dump($checkEmail);
                 if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
                     $thongbao = "$email Nhập Không Hợp Lệ!";
                     $thanhcong = false;
@@ -245,9 +256,12 @@ if (isset($_GET['act'])) {
                     $randomKey = rand(100000, 999999);
                     setcookie("randomKey", $randomKey, time() + 300);
                     // start mail
-                    $userName = 'datvemaybayy@gmail.com';
-                    $passWord = 'Datvemaybay123';
-                    $from = 'datvemaybayy@gmail.com';
+                    // $userName = 'datvemaybayy@gmail.com';
+                    // $passWord = 'Datvemaybay123';
+                    // $from = 'datvemaybayy@gmail.com';
+                    $userName = 'trananh123duong@gmail.com';
+                    $passWord = 'hxmxhfnyryjjakta';
+                    $from = 'trananh123duong@gmail.com';
                     $title = 'Lấy lại Mật Khẩu';
                     $subject = 'Quên Mật Khẩu';
                     $linkKH = "<a href='" . $_SERVER['HTTP_HOST'] . SITE_URL .
@@ -316,7 +330,7 @@ if (isset($_GET['act'])) {
                 $page_num = $_GET['page_num'];
             }
             settype($page_num, "int");
-
+            $showAllSanBay = showAllSanBay();
             $vekhuyenmai=showvekm($page_num, $page_size);   // lay tat ca blog
             $total_rows_km = countvekm();
             $baseurl = SITE_URL . "?act=khuyenmai";
@@ -468,7 +482,8 @@ if (isset($_GET['act'])) {
         case 'chonve':
 
             if (isset($_GET['idcb']) && ($_GET['idcb']) > 0) {
-                
+                unset($_SESSION['ip']);
+                $_SESSION['ip'] = $_SERVER['REMOTE_ADDR'];
                 $idChuyenBay = $_GET['idcb'];        
                 echo ' <link rel="stylesheet" href="views/css/long/chonghe.css">';
                 $loaiGhe = $_GET['loaighe'];
@@ -485,6 +500,10 @@ if (isset($_GET['act'])) {
             break;
 
         case 'thanhtoan':
+            if (isset($_SESSION['daily']) && ($_SESSION['daily'])) {
+                $iddaily = $_SESSION['daily'];
+                $tendaily = showtendl($iddaily);
+            }
             require_once "views/thanhtoan.php";
             break;
         case 'tinhtien':
@@ -526,9 +545,9 @@ if (isset($_GET['act'])) {
                 // $email=$sendmalve;
                 
                 // start mail
-                $userName = 'tranquangnhan1606@gmail.com';
-                $passWord = 'Tranquangnhan@1606';
-                $from = 'tranquangnhan1606@gmail.com';
+                $userName = 'trananh123duong@gmail.com';
+                $passWord = 'hxmxhfnyryjjakta';
+                $from = 'trananh123duong@gmail.com';
                 // $userName = 'datvemaybayy@gmail.com';
                 // $passWord = 'Datvemaybay123';
                 // $from = 'datvemaybayy@gmail.com';
@@ -603,7 +622,7 @@ if (isset($_GET['act'])) {
                 // $linkKH = sprintf($linkKH);
                 $body = "<h4>Thông Tin Chuyến Bay</h4> " . $linkKH;
                 foreach ($sendmalve as $mail) {
-                 sendMail($userName,$passWord,$from,$mail['gmail'],'nhân',$title,$subject,$body);
+                 sendMail($userName,$passWord,$from,$mail['gmail'],'Khách',$title,$subject,$body);
                 }
             }
             if(isset($_SESSION['idchuyenbay'])){

@@ -35,7 +35,27 @@ $(document).ready(function() {
 
                 let IsChoosed = (ThisBox.hasClass('l-ghe-active'));
                 if (IsChoosed) {
-                    fireErr('Ghế không còn trống !');
+                    // fireErr('Ghế không còn trống !');
+                    // huy ghe
+                    let ID = ThisBox.text();
+                    let idChuyenBay = $("#idcb").val();
+                    var huyGhe = new FormData();
+                    huyGhe.append('Action', 'huyghekh');
+                    huyGhe.append('idghekh', ID);
+                    huyGhe.append('idcbkh', idChuyenBay);
+                    await $.ajax({
+                        type: "POST",
+                        url: 'controllers/ajax/chonghe.php',
+                        dataType: 'JSON',
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        data: huyGhe,
+                        success: function(Data) {
+                            location.reload();
+                            
+                        }
+                    })
                     return;
                 } else if (MaxSheet >= 5 && IsRemoveSelected === false) {
                     fireErr('Bạn chỉ được đặt tối đa 5 vé !');
@@ -58,7 +78,12 @@ $(document).ready(function() {
                         contentType: false,
                         processData: false,
                         data: setGhe,
-                        success: function(Data) {}
+                        success: function(Data) {},
+                        complete: function() {
+                            // var html = '<p class="lead text-center seat-cart" id="'+ID+'">Chỗ: ' + ID + '</p>';
+                            // $('.bool-seat').html(html);
+                            
+                        }
                     })
                 }
 
@@ -78,7 +103,23 @@ $(document).ready(function() {
 
                 let IsChoosed = (ThisBox.hasClass('l-ghe-active'));
                 if (IsChoosed) {
-                    fireErr('Ghế không còn trống !');
+                    // fireErr('Ghế không còn trống !');
+                    let ID = ThisBox.text();
+                    let idChuyenBay = $("#idcb").val();
+                    var huyGhe = new FormData();
+                    huyGhe.append('Action', 'huyghe');
+                    huyGhe.append('idghe', ID);
+                    huyGhe.append('idcb', idChuyenBay);
+                    await $.ajax({
+                        type: "POST",
+                        url: 'controllers/ajax/chonghe.php',
+                        dataType: 'JSON',
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        data: huyGhe,
+                        success: function(Data) {}
+                    })
                     return;
                 } else if (MaxSheet >= 5 && IsRemoveSelected === false) {
                     fireErr('Bạn chỉ được đặt tối đa 5 vé !');

@@ -3,9 +3,9 @@
         <a ><i class="fas fa-arrow-circle-right" ></i></a>
         
     </div>
-    <div class="l-bt_close" id="huyghe">
+    <!-- <div class="l-bt_close" id="huyghe">
         <a ><i class="fa fa-close"></i></a> 
-    </div>
+    </div> -->
    
     <div class="text-center">
             <div class="row w-100 mr-0 pd-tb-100px background-cl-3">

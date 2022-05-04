@@ -29,6 +29,7 @@
                                     <th>Số Điện Thoại</th>
                                     <th>Địa Chỉ</th>
                                     <th>Thành Phố</th>
+                                    <th>Đại lý</th>
                                 </tr>
                             </thead>
 
@@ -59,6 +60,7 @@
                         <td><?=$kh['sodienthoai']?></td>
                         <td><?=$kh['diachi']?></td>
                         <td><?=$kh['thanhpho']?></td>
+                        <td><?=$kh['iddaily']?></td>
                         <td>
                             <a onclick='checkDelete("<?=$linkdel?>")'><i class="fa fa-trash mr-3" ></i></a>
                             <a href="<?=$linkedit?>"><i class="fa fa-edit"></i></a>

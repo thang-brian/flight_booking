@@ -20,6 +20,9 @@
             $_SESSION['sid'] = $user['id'];
             $_SESSION['suser']= $user['user'];
             $_SESSION['role'] = $user['role'];
+            if($user['iddaily']!=0){
+                $_SESSION['daily'] = $user['iddaily'];
+            }
             return true;
         }else{
             return false;

@@ -23,6 +23,9 @@ switch ($act) {
                     $_SESSION['sid'] = $checkuser['id'];
                     $_SESSION['suser']= $checkuser['user'];
                     $_SESSION['role'] = $checkuser['role']; // role=1 =>admin
+                    if($checkuser['iddaily']!=0){
+                        $_SESSION['daily'] = $checkuser['iddaily'];
+                    }
                     if($checkuser['role'] == 1) {
                         header('location: ../index.php');
                     }
@@ -43,6 +46,7 @@ switch ($act) {
             unset($_SESSION['sid']);
             unset($_SESSION['suser']); 
             unset($_SESSION['adimg']);
+            unset($_SESSION['daily']);
             header('location: login.php?act=login');
         }
     break;

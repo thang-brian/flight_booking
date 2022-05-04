@@ -177,6 +177,10 @@
                                              <label for="diachi">Gmail</label>
                                             <input type="text" class="form-control gmail" name="gmail" id="gmail" placeholder="">
                                         </div>
+                                        <div class="form-group col-md-6">
+                                             <label for="diachi">Đại lý</label>
+                                             <input class="form-control" type="text" name="daily" placeholder="'.$tendaily.'" readonly>
+                                        </div>
                                     </div>
                                   ';
                             }

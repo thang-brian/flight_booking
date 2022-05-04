@@ -21,9 +21,9 @@
         return result1(0,$sql); 
     }
     // admin add product
-    function addhoadon($ngayDatVe,$trangThai,$tongTien){
-        $sql = "INSERT INTO hoadon (ngaydatve,trangthai,tongtien) VALUES 
-        ('$ngayDatVe','$trangThai','$tongTien')";
+    function addhoadon($ngayDatVe,$trangThai,$tongTien,$iddaily){
+        $sql = "INSERT INTO hoadon (ngaydatve,trangthai,tongtien,iddaily) VALUES 
+        ('$ngayDatVe','$trangThai','$tongTien','$iddaily')";
         return getLastId($sql);
     }
     function addHoaDonChiTiet($lastId,$idChuyenBay,$viTriGhe,$hangGhe,$giaTien,$hoTenKh,$gioiTinh,$soDienThoai,$cmnd,$gmail,$random){
