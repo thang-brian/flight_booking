@@ -219,9 +219,6 @@ $("#tieptucthuonggia").click(function(e) {
                             if (response.StatusCode == '1') {
                                 var arr = [];
                                 let idchuyenbay = $("#idcb").val();
-                                //lấy tất cả ghế đánh dấu
-                                // get ip
-                                let ip = getIp();
                                 $(".l-ghe-thuonggia.l-ghe-active").each(function(index, element) {
                                     var idGhe = $(this);
                                     idGhe = idGhe.html();

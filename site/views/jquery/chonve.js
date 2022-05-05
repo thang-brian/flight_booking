@@ -128,12 +128,24 @@ $("#tieptucthuong").click(function(e) {
                             if (response.StatusCode == '1') {
                                 var arr = [];
                                 let idchuyenbay = $("#idcb").val();
+                                var ip = document.getElementById('ipad').value;
                                 //lấy tất cả ghế đánh dấu
                                 $(".l-ghe-phothong.l-ghe-active").each(function(index, element) {
-                                    var idGhe = $(this);
-                                    idGhe = idGhe.html();
-                                    arr.push(idGhe);
+                                    if($('.l-ghe-active').hasClass(ip)){
+                                        var idGhe = $(this);
+                                        idGhe = idGhe.html();
+                                        arr.push(idGhe);
+                                    }
                                 });
+
+                                if(arrkh.length == 0){
+                                    Swal.fire(
+                                        'Lỗi!',
+                                        'Bạn chưa chọn ghế nào để thêm hoá đơn.',
+                                        'error'
+                                    )
+                                    return false;
+                                }
 
                                 //push
                                 await $.ajax({
@@ -149,12 +161,24 @@ $("#tieptucthuong").click(function(e) {
 
                                 var arrkh = []; // khi đó mảng này chứa [6,7]
                                 let idchuyenbaykh = $("#idcb").val();
+                                var ip = document.getElementById('ipad').value;
                                 //lấy tất cả ghế đánh dấu
                                 $(".l-ghe-phothong.l-ghe-active").each(function(index, element) {
-                                    var idGhe = $(this);
-                                    idGhe = idGhe.html();
-                                    arrkh.push(idGhe);
+                                    if($('.l-ghe-active').hasClass(ip)){
+                                        var idGhe = $(this);
+                                        idGhe = idGhe.html();
+                                        arrkh.push(idGhe);
+                                    }
                                 });
+
+                                if(arrkh.length == 0){
+                                    Swal.fire(
+                                        'Lỗi!',
+                                        'Bạn chưa chọn ghế nào để thêm hoá đơn.',
+                                        'error'
+                                    )
+                                    return false;
+                                }
                                 //push
                                 await $.ajax({
                                     type: "POST",
@@ -235,12 +259,24 @@ $("#tieptucthuonggia").click(function(e) {
                             if (response.StatusCode == '1') {
                                 var arr = [];
                                 let idchuyenbay = $("#idcb").val();
+                                var ip = document.getElementById('ipad').value;
                                 //lấy tất cả ghế đánh dấu
                                 $(".l-ghe-thuonggia.l-ghe-active").each(function(index, element) {
-                                    var idGhe = $(this);
-                                    idGhe = idGhe.html();
-                                    arr.push(idGhe);
+                                    if($('.l-ghe-active').hasClass(ip)){
+                                        var idGhe = $(this);
+                                        idGhe = idGhe.html();
+                                        arr.push(idGhe);
+                                    }
                                 });
+
+                                if(arrkh.length == 0){
+                                    Swal.fire(
+                                        'Lỗi!',
+                                        'Bạn chưa chọn ghế nào để thêm hoá đơn.',
+                                        'error'
+                                    )
+                                    return false;
+                                }
 
                                 //push
                                 await $.ajax({
@@ -264,7 +300,15 @@ $("#tieptucthuonggia").click(function(e) {
                                         arrkh.push(idGhe);
                                     }
                                 });
-                                alert(arrkh);
+
+                                if(arrkh.length == 0){
+                                    Swal.fire(
+                                        'Lỗi!',
+                                        'Bạn chưa chọn ghế nào để thêm hoá đơn.',
+                                        'error'
+                                    )
+                                    return false;
+                                }
 
                                 //push
                                 await $.ajax({

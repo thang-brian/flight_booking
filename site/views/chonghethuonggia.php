@@ -86,7 +86,6 @@
                     <div class="jumbotron jumbotron-fluid">
                         <div class="container">
                             <h1 class="display-5">Chỗ đã đặt</h1>
-                            <?php var_dump($_SESSION)?>
                             <div class="bool-seat">
                                 <p class="lead text-center seat-cart" id="">Chỗ: </p>
                             </div>
